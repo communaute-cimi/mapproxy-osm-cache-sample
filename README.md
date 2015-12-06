@@ -27,5 +27,5 @@ sudo mapproxy-seed -f mapproxy-osm.yaml -c 4 seed-osm.yaml
 
 ## La démo 
 
-Dans le système hôte : http://localhost:8080/demo/
+Dans le système hôte (le proxy doit être démarré) : http://localhost:8080/demo/
 
