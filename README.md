@@ -3,6 +3,7 @@
 Exemple de proxy cache de tuiles OSM
 
 ```sh
+vagrant up
 vagrant ssh # aller dans la VM
 ```
 
