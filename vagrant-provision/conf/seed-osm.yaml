@@ -1,0 +1,21 @@
+# ---------------------------------------
+# MapProxy example seeding configuration.
+# ---------------------------------------
+#
+# This is a minimal MapProxy seeding configuration.
+# See full_seed_example.yaml and the documentation for more options.
+#
+
+seeds:
+  seed_etrechy:
+    caches: [osm_cache]
+    coverages: [etrechy]
+    grids: [GLOBAL_MERCATOR]
+    # grids: []
+    # coverages: []
+    levels: [15,16,17]
+
+coverages:
+  etrechy:
+    bbox : [2.1695, 48.4999, 2.2095, 48.4757]
+    srs: 'EPSG:4326'
