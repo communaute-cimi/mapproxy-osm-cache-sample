@@ -29,3 +29,7 @@ sudo mapproxy-seed -f mapproxy-osm.yaml -c 4 seed-osm.yaml
 
 Dans le système hôte (le proxy doit être démarré) : http://localhost:8080/demo/
 
+## La suite
+
+Ajouter un serveur web en frontal, NGINX ?
+
