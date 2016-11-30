@@ -2,19 +2,21 @@ services:
   #sets up how to make the source data available
   demo:
   tms:
+  wms:
+    srs: ['EPSG:2154','EPSG:3857']
 
 layers:
   #sets up which layers you want to make available using the services above. You can add many, but let's stick to osm data here.
   - name: osm
     title: Open Streetmap Tiles
     sources: [osm_cache] #this layer should use the osm_cache (defined below) as it's source.
-    
+
 caches:
   #setup the cache for the open streetmap tiles. This cache is used by the layer above.
   osm_cache:
     sources: [osm_tiles] #here you set what source data (defined below) you want to cache
     format: image/png
-  
+
 sources:
    osm_tiles:
      #the osm_tiles source refers to the openstreetmap.org tiles. These will be downloaded upon request (if not already cached) and served by MapProxy
@@ -24,8 +26,6 @@ sources:
 
 grids:
   osm_grid:
-    #this srs and origin specify a grid that can be used elsewhere in the configuration. In this example it is used for the osm_tiles source. These settings are correct for openstreetmap.org tiles.
-    #The google mercator srs is used (also called EPSG:900913), and the origin of the tiles is north-west). If you get this wrong, you might very well get an all-blue world.
     srs: EPSG:900913
     origin: nw
 
@@ -36,8 +36,6 @@ globals:
     base_dir: './cache_data'
     # where to store lockfiles
     lock_dir: './cache_data/locks'
- 
- 
   # image/transformation options
   image:
       resampling_method: bilinear

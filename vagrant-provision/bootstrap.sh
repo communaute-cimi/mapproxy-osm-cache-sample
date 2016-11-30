@@ -1,4 +1,4 @@
-apt-get update
+#apt-get update
 aptitude -y install python-pip
 aptitude -y install python-virtualenv
 aptitude -y install python-imaging python-yaml libproj0
