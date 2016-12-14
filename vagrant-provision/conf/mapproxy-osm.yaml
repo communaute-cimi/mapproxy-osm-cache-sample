@@ -2,8 +2,9 @@ services:
   #sets up how to make the source data available
   demo:
   tms:
+  wmts:
   wms:
-    srs: ['EPSG:2154','EPSG:3857']
+    srs: ['EPSG:900913', 'EPSG:2154','EPSG:3857']
 
 layers:
   #sets up which layers you want to make available using the services above. You can add many, but let's stick to osm data here.
@@ -16,6 +17,7 @@ caches:
   osm_cache:
     sources: [osm_tiles] #here you set what source data (defined below) you want to cache
     format: image/png
+    grids: [GLOBAL_MERCATOR]
 
 sources:
    osm_tiles:
@@ -33,9 +35,9 @@ globals:
   #next are some global configuration options for MapProxy. They mostly explain themselves, or can be looked-up in the MapProxy docs.
   cache:
     # where to store the cached images
-    base_dir: './cache_data'
+    base_dir: '/home/vagrant/mymapproxy/cache_data'
     # where to store lockfiles
-    lock_dir: './cache_data/locks'
+    lock_dir: '/home/vagrant/mymapproxy/cache_data'
   # image/transformation options
   image:
       resampling_method: bilinear
