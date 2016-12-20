@@ -11,8 +11,6 @@ seeds:
     caches: [osm_cache]
     coverages: [etrechy]
     grids: [GLOBAL_MERCATOR]
-    # grids: []
-    # coverages: []
     levels: [15,16,17]
 
 coverages:
@@ -21,8 +19,15 @@ coverages:
     srs: 'EPSG:4326'
 
 cleanups:
-  time1:
+  before_one_day:
     caches: [osm_cache]
     grids: [GLOBAL_MERCATOR]
     remove_before:
-      time: 2016-12-09T20:00:00
+      days: 1
+  before_ten_minutes:
+    caches: [osm_cache]
+    minutes: 10
+  all:
+    caches: [osm_cache]
+    grids: [GLOBAL_MERCATOR]
+    second: 5
