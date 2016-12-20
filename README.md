@@ -25,12 +25,14 @@ Le moissonnage permet de récupérer et mettre en cache des tuiles en fonction d
 
 ```sh
 source mapproxy/bin/activate
-sudo mapproxy-seed -f mapproxy-osm.yaml -c 4 seed-osm.yaml
+sudo -u www-data -c 4 mapproxy-seed -f /vagrant_sync/conf/mapproxy-osm.yaml -s /vagrant_sync/conf/seed-osm.yaml --seed=seed_etrech
 ```
 
 ## La démo 
 
 La démo est accessible : http://localhost:8082/
+
+## Installation de la VM
 
 ## Installation mapproxy
 ```sh
@@ -41,13 +43,12 @@ aptitude -y install libgeos-dev python-lxml libgdal-dev python-shapely
 pip install Pillow
 pip install MapProxy
 ```
-## Création d'une environnement virtuel
+
+## Création d'un environnement virtuel
 ```sh
 virtualenv --system-site-packages mapproxy
 source mapproxy/bin/activate
 ```
-
-## Création d'une environnement virtuel
 
 ## Intégration apache
 
@@ -64,7 +65,9 @@ apt-get install libapache2-mod-wsgi
 ### Création d'un fichier de configuration mapproxy-wsgi
 
 Avec une commande "util" de mapproxy créer le fichier mapproxy-config.wsgi (fichier python)
+```sh
 mapproxy-util create -t wsgi-app -f mapproxy.yaml /opt/soclesig-X.X.X-venv-mapproxy/config.py
+```
 Modfier les chemins dans le fichier
 
 ### Fichier de configuration mapproxy
@@ -85,6 +88,7 @@ WSGIPythonPath /home/vagrant/mapproxy/lib/python2.7/site-packages
       Require all granted
 </Directory>
 ```
+
 Modifier les chemins le cas échéant...
 
 ### Permettre la sortie du www
