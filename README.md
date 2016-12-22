@@ -37,9 +37,9 @@ sudo -u www-data /opt/mapproxy/venv_mapproxy/bin/mapproxy-seed -f /vagrant_sync/
 ## Sous le capôt
 
 ### répertoire mapproxy
-Le répertoire de base : /opt/mapproxy
-Environnement virtuel python : /opt/mapproxy/venv_mapproxy
-Cache : /opt/mapproxy/cache_data
+* Répertoire de base : /opt/mapproxy
+*  Environnement virtuel python : /opt/mapproxy/venv_mapproxy
+* Cache : /opt/mapproxy/cache_data
 
 ### Fichiers de configuration
 
