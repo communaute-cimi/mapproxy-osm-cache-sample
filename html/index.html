@@ -2,16 +2,23 @@
 <html>
 <head>
 	
-	<title>Quick Start - Leaflet</title>
+	<title>Mapproxy Demo - Leaflet</title>
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
-
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-
+	<link rel="stylesheet" href="leaflet.css" />
+	<script src="leaflet.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
 
 	
 </head>
@@ -19,12 +26,12 @@
 
 
 
-<div id="mapid" style="width: 600px; height: 400px;"></div>
+<div id="map"></div>
 <script>
 
-	var mymap = L.map('mapid').setView([48.4886,2.17605], 4);
+	var mymap = L.map('map').setView([48.4886,2.17605], 1);
 
-	L.tileLayer('http://localhost:8081/tiles/1.0.0/osm/EPSG900913/{z}/{x}/{y}.png', {
+	L.tileLayer('http://localhost:8082/mapproxy/wmts/osm/GLOBAL_MERCATOR/{z}/{x}/{y}.png', {
 		maxZoom: 18,
 		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
