@@ -29,7 +29,7 @@ vagrant up
 ```
 
 Une fois la VM lancée vérifier le fonctionnement:
-* [La carte](http://localhost:8082/) : 
+* [La carte](http://localhost:8082/)
 * La [démo mapproxy](http://localhost:8082/mapproxy/demo/) qui permet de tester les différentes configurations : 
 
 ## Moissonnage (seeding)
@@ -44,7 +44,7 @@ sudo -u www-data /opt/mapproxy/venv_mapproxy/bin/mapproxy-seed -f /vagrant_sync/
 
 ### répertoire mapproxy
 * Répertoire de base : /opt/mapproxy
-*  Environnement virtuel python : /opt/mapproxy/venv_mapproxy
+* Environnement virtuel python : /opt/mapproxy/venv_mapproxy
 * Cache : /opt/mapproxy/cache_data
 
 ### Fichiers de configuration
