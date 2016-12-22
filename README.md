@@ -32,6 +32,17 @@ Le moissonnage permet de récupérer et mettre en cache des tuiles en fonction d
 sudo -u www-data /opt/mapproxy/venv_mapproxy/bin/mapproxy-seed -f /vagrant_sync/conf/mapproxy-osm.yaml -s /vagrant_sync/conf/seed-osm.yaml --seed=seed_etrechy
 ```
 
+## Sous le capôt
+
+### répertoire mapproxy
+Le répertoire de base : /opt/mapproxy
+Environnement virtuel python : /opt/mapproxy/venv_mapproxy
+Cache : /opt/mapproxy/cache_data
+
+### Fichiers de configuration
+
+### Bind python apache
+
 ## Le script de bootstrap
 
 ```sh
