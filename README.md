@@ -17,8 +17,14 @@ Chaque tuile est mise en cache pour une durée indéterminée, c'est par des scr
 
 [Vagrant](https://www.vagrantup.com/) est utilisé pour automatiser la création de la VM et le provisionning.
 
+Pour utiliser ce dépôt : 
+
 ```sh
-# Prévoir 5mn lors du premier démarrage.
+# importer le dépt
+git clone https://github.com/communaute-cimi/mapproxy-osm-cache-sample
+cd mapproxy-osm-cache-sample
+
+# Créer la VM et installer les composants (prévoir 5mn lors du premier démarrage)
 vagrant up
 ```
 
@@ -129,7 +135,7 @@ Modifier apache2.conf
 ```
 
 ## liens
-https://httpd.apache.org/docs/2.4/fr/mod/core.html
-https://mapproxy.org/docs/latest/
-https://doc.ubuntu-fr.org/tutoriel/virtualhosts_avec_apache2#configuration_des_hotes_virtuels
+* https://httpd.apache.org/docs/2.4/fr/mod/core.html
+* https://mapproxy.org/docs/latest/
+* https://doc.ubuntu-fr.org/tutoriel/virtualhosts_avec_apache2#configuration_des_hotes_virtuels
 
