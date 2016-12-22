@@ -21,8 +21,8 @@ vagrant up
 ```
 
 Une fois la VM lancée vérifier le fonctionnement:
-* La carte : http://localhost:8082/
-* La démo mapproxy qui permet de tester les différentes configurations : http://localhost:8082/mapproxy/demo/
+* [La carte](http://localhost:8082/) : 
+* La [démo mapproxy](http://localhost:8082/mapproxy/demo/) qui permet de tester les différentes configurations : 
 
 ## Moissonnage (seeding)
 
