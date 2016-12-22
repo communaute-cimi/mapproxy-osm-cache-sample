@@ -4,6 +4,8 @@
 
 Ce vagrant file créé une instance de mapproxy configuré pour aller chercher des tuiles sur openstreetmap.org et les stocker dans un cache.
 
+<img src="/doc/img/mapproxy-demos-screenshot.png" width="700">
+
 Autre caractéristique de mapproxy, permettre la transformation des formats à partir d'un ou plusieurs caches, ce qui est fait dans la démo, OSM est fourni en : 
 * WMS (webmercator et 2154)
 * WMTS (webmercator)
