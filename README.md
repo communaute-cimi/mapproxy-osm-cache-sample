@@ -1,4 +1,4 @@
-# Exemple de proxy "données spatiales" avec mapproxy (vagrant)
+# Un proxy "données spatiales" avec mapproxy et vagrant
 
 ## Intro
 
