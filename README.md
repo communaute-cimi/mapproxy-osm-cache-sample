@@ -12,7 +12,7 @@ Le vagrant file créé une instance apache/mapproxy configuré pour aller cherch
 
 <img src="/doc/img/mapproxy-demos-screenshot.png" width="700">
 
-Mapproxy, permettre la transformation des formats à partir d'un ou plusieurs caches, ce qui est fait dans la démo, OSM est fourni en : 
+Mapproxy permet la transformation des formats à partir d'un ou plusieurs caches, ce qui est fait dans la démo, OSM est fourni en : 
 * WMS (webmercator et 2154)
 * WMTS (webmercator)
 * TMS (webmercator)
