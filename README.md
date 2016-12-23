@@ -2,16 +2,22 @@
 
 ## Intro
 
-Ce vagrant file créé une instance de mapproxy configuré pour aller chercher des tuiles sur openstreetmap.org et les stocker dans un cache.
+Ce dépôt permet de créer très rapidement un cache de tuiles carto (OSM en l'occurrence) sur votre machine. 
+
+Les deux raisons pour lesquelles je l'utilise : 
+* Permet de disposer d'un fond de plan offline
+* Permet d'afficher le fond OSM en WMTS facilement utilisable avec QGIS.
+
+Le vagrant file créé une instance apache/mapproxy configuré pour aller chercher des tuiles sur openstreetmap.org et les stocker dans un cache.
 
 <img src="/doc/img/mapproxy-demos-screenshot.png" width="700">
 
-Autre caractéristique de mapproxy, permettre la transformation des formats à partir d'un ou plusieurs caches, ce qui est fait dans la démo, OSM est fourni en : 
+Mapproxy, permettre la transformation des formats à partir d'un ou plusieurs caches, ce qui est fait dans la démo, OSM est fourni en : 
 * WMS (webmercator et 2154)
 * WMTS (webmercator)
 * TMS (webmercator)
 
-Chaque tuile est mise en cache pour une durée indéterminée, c'est par des scripts de purge que l'on peut gérer le cache (cleanups)
+Chaque tuile est mise en cache pour une durée indéterminée, c'est par des scripts de purge que l'on peut gérer le cache (cleanups).
 
 ## Utilisation
 
@@ -138,4 +144,9 @@ Modifier apache2.conf
 * https://httpd.apache.org/docs/2.4/fr/mod/core.html
 * https://mapproxy.org/docs/latest/
 * https://doc.ubuntu-fr.org/tutoriel/virtualhosts_avec_apache2#configuration_des_hotes_virtuels
+
+## Merci
+
+Merci Guillaume Collot pour son aide...
+
 
