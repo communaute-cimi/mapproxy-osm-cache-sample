@@ -2,7 +2,7 @@
 
 ## Intro
 
-Ce dépôt permet de créer très rapidement un cache de tuiles carto (OSM en l'occurrence) sur votre machine. 
+Ce dépôt permet de créer très rapidement un cache de tuiles carto (OSM en l'occurrence) dans la machine virtuelle (gérée par vagrant+ virtualbox qui doivent être installé). 
 
 Les deux raisons pour lesquelles je l'utilise : 
 * Permet de disposer d'un fond de plan offline
